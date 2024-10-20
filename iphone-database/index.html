@@ -1,79 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Database</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script defer src="js/script.js"></script>
-</head>
-<body>
-    <div id="login-container" class="centered-container">
-        <h1>iPhone Database</h1>
-        <form id="login-form">
-            <input type="text" id="login-username" placeholder="Benutzername" required>
-            <input type="password" id="login-password" placeholder="Passwort" required>
-            <button type="submit">Anmelden</button>
-            <p>Noch keinen Account? <span onclick="toggleRegisterPopup()">Hier registrieren</span></p>
-        </form>
-    </div>
-
-    <!-- Registrierungs-Popup -->
-    <div id="register-popup" class="popup" style="display: none;">
-        <div class="popup-content">
-            <h2>Registrieren</h2>
-            <form id="register-form">
-                <input type="text" id="register-username" placeholder="Benutzername" required>
-                <input type="password" id="register-password" placeholder="Passwort" required>
-                <button type="submit">Registrieren</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
-<!-- Login-Formular -->
-<div id="login-container" class="centered-container">
-    <h1>iPhone Datenbank</h1>
-    <form id="login-form">
-        <input type="text" id="login-username" placeholder="Benutzername" required>
-        <input type="password" id="login-password" placeholder="Passwort" required>
-        <button type="submit">Anmelden</button>
-        <p>Noch keinen Account? <span onclick="toggleRegisterPopup()" style="color: blue; cursor: pointer;">Hier registrieren</span></p>
-    </form>
-</div>
-
-<!-- Registrierungs-Popup -->
-<div id="register-popup" class="popup" style="display: none;">
-    <div class="popup-content">
-        <h2>Registrieren</h2>
-        <form id="register-form">
-            <input type="text" id="register-username" placeholder="Benutzername" required>
-            <input type="password" id="register-password" placeholder="Passwort" required>
-            <button type="submit">Registrieren</button>
-        </form>
-        <button onclick="toggleRegisterPopup()">Abbrechen</button>
-    </div>
-</div>
-<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Datenbank - Anmeldung</title>
-    <link rel="stylesheet" href="style.css">
+    <title>iPhone Database - Anmeldung</title>
+    <!-- Google Fonts für bessere Typografie -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Verknüpfung zur CSS-Datei -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1 class="logo">iPhone Database</h1>
+        <div class="logo">iPhone Database</div>
     </header>
 
     <!-- Login-Formular -->
     <div id="login-container" class="container">
         <h2>Anmelden</h2>
         <form id="login-form" class="form">
-            <input type="text" id="login-username" placeholder="Benutzername" required>
-            <input type="password" id="login-password" placeholder="Passwort" required>
+            <div class="input-group">
+                <input type="text" id="login-username" placeholder="Benutzername" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="login-password" placeholder="Passwort" required>
+            </div>
             <button type="submit" class="btn">Anmelden</button>
             <p>Noch keinen Account? <span onclick="toggleRegisterPopup()" class="link">Hier registrieren</span></p>
         </form>
@@ -84,7 +35,19 @@
         <div class="popup-content">
             <h2>Registrieren</h2>
             <form id="register-form" class="form">
-                <input type="text" id="register-username" placeholder="Benutzername" required>
-                <input type="password" id="register-password" placeholder="Passwort" required>
-                <button type="submit" class="btn">Registrieren</
+                <div class="input-group">
+                    <input type="text" id="register-username" placeholder="Benutzername" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="register-password" placeholder="Passwort" required>
+                </div>
+                <button type="submit" class="btn">Registrieren</button>
+            </form>
+            <button class="btn close-btn" onclick="toggleRegisterPopup()">Abbrechen</button>
+        </div>
+    </div>
 
+    <!-- JavaScript-Datei -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
