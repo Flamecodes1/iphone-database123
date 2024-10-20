@@ -1,147 +1,4 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f5f7;
-    color: #333;
-    margin: 0;
-}
-
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav .nav-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.profile-icon {
-    cursor: pointer;
-}
-
-.profile-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.centered-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-}
-
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.iphone-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.iphone-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.iphone-card:hover {
-    transform: translateY(-5px);
-}
-
-.iphone-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007aff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-/* Login-Container */
-#login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-/* Registrierungs-Popup */
-#register-popup {
-    display: none; /* Standardmäßig ausgeblendet */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-
-.popup-content form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.popup-content form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007aff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup-content form button:hover {
-    background-color: #005bb5;
-}
-/* Allgemeines Styling */
+/* Allgemeine Einstellungen */
 * {
     margin: 0;
     padding: 0;
@@ -149,57 +6,83 @@ button:hover {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f5f7;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f7;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 
+/* Header Styling */
 header {
     position: absolute;
     top: 20px;
-    text-align: center;
     width: 100%;
+    text-align: center;
 }
 
 header .logo {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #007aff;
+    letter-spacing: 2px;
 }
 
+/* Container Styling */
 .container {
-    background-color: white;
-    padding: 40px;
+    background: #fff;
+    padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     width: 400px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #333;
 }
 
-.form input {
+/* Formular Styling */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {
     width: 100%;
-    padding: 15px;
-    margin: 10px 0;
+    padding: 15px 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
+.input-group input:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+/* Button Styling */
 .btn {
-    width: 100%;
     padding: 15px;
-    margin: 20px 0;
     background-color: #007aff;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
@@ -211,10 +94,20 @@ h2 {
     background-color: #005bb5;
 }
 
+.close-btn {
+    background-color: #ff3b30;
+}
+
+.close-btn:hover {
+    background-color: #e02e24;
+}
+
+/* Link Styling */
 .link {
     color: #007aff;
     cursor: pointer;
     text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 .link:hover {
@@ -223,31 +116,51 @@ h2 {
 
 /* Popup Styling */
 .popup {
-    display: none;
+    display: none; /* Standardmäßig ausgeblendet */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     justify-content: center;
     align-items: center;
+    animation: fadeIn 0.3s ease;
 }
 
 .popup-content {
-    background-color: white;
-    padding: 40px;
+    background: #fff;
+    padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     width: 400px;
     text-align: center;
+    position: relative;
+    animation: slideDown 0.3s ease;
 }
 
-.close-btn {
-    background-color: #f44336;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.close-btn:hover {
-    background-color: #d32f2f;
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
+/* Responsives Design */
+@media (max-width: 500px) {
+    .container, .popup-content {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
