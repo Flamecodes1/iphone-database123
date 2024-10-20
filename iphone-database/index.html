@@ -31,4 +31,27 @@
     </div>
 </body>
 </html>
+<!-- Login-Formular -->
+<div id="login-container" class="centered-container">
+    <h1>iPhone Datenbank</h1>
+    <form id="login-form">
+        <input type="text" id="login-username" placeholder="Benutzername" required>
+        <input type="password" id="login-password" placeholder="Passwort" required>
+        <button type="submit">Anmelden</button>
+        <p>Noch keinen Account? <span onclick="toggleRegisterPopup()" style="color: blue; cursor: pointer;">Hier registrieren</span></p>
+    </form>
+</div>
+
+<!-- Registrierungs-Popup -->
+<div id="register-popup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <h2>Registrieren</h2>
+        <form id="register-form">
+            <input type="text" id="register-username" placeholder="Benutzername" required>
+            <input type="password" id="register-password" placeholder="Passwort" required>
+            <button type="submit">Registrieren</button>
+        </form>
+        <button onclick="toggleRegisterPopup()">Abbrechen</button>
+    </div>
+</div>
 
