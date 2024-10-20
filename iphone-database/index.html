@@ -54,4 +54,37 @@
         <button onclick="toggleRegisterPopup()">Abbrechen</button>
     </div>
 </div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Datenbank - Anmeldung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="logo">iPhone Database</h1>
+    </header>
+
+    <!-- Login-Formular -->
+    <div id="login-container" class="container">
+        <h2>Anmelden</h2>
+        <form id="login-form" class="form">
+            <input type="text" id="login-username" placeholder="Benutzername" required>
+            <input type="password" id="login-password" placeholder="Passwort" required>
+            <button type="submit" class="btn">Anmelden</button>
+            <p>Noch keinen Account? <span onclick="toggleRegisterPopup()" class="link">Hier registrieren</span></p>
+        </form>
+    </div>
+
+    <!-- Registrierungs-Popup -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <h2>Registrieren</h2>
+            <form id="register-form" class="form">
+                <input type="text" id="register-username" placeholder="Benutzername" required>
+                <input type="password" id="register-password" placeholder="Passwort" required>
+                <button type="submit" class="btn">Registrieren</
 
